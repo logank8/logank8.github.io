@@ -1,3 +1,8 @@
 p {
     font-style: italic;
 }
+
+.good-font {
+    font-weight: bold;
+    color: mediumorchid;
+}
