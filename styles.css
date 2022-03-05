@@ -10,3 +10,32 @@ p {
 #test-id {
     color: blue;
 }
+
+.grid-table {
+    /* tells browser that this is a grid container */
+    display: grid; 
+    /* set dimensions for rows, auto allows it to be more flexible */
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+}
+
+/* media conditionals */
+
+.grid {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+@media (min-width: 600px) {
+    /* breakpoint 1: run the code if the min width of screen is 600px */
+    .grid {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+@media (min-width: 900px) {
+    /* breakpoint 2: run this code if min width of screen is at least 900px */
+    .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
