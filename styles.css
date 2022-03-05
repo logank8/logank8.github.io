@@ -39,3 +39,8 @@ p {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
+
+.container {
+    max-width: 840px;
+    margin: 0 auto;
+}
