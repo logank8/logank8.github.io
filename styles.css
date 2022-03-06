@@ -63,3 +63,16 @@ p {
     list-style: none;
     padding: 0;
 }
+
+.pic1 {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0 4px 6px 0 rgba(34, 60, 80, 0.16);
+    transition: all ease-in-out 0.2s;
+}
+
+.pic1:hover {
+    box-shadow: 0 8px 12px 0 rgba(34, 60, 80, 0.16);
+}
