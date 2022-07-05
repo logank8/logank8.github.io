@@ -11,6 +11,28 @@ p {
     color: blue;
 }
 
+body {
+    background-color: rgba(190,176,167,1);
+}
+/* top nav bar styling*/
+
+.topnav {
+    background-color: rgba(224, 120, 99, 1);
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+
+
+/* top nav styling end */
+
 .grid-table {
     /* tells browser that this is a grid container */
     display: grid; 
@@ -41,7 +63,7 @@ p {
 }
 
 .container {
-    max-width: 840px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
