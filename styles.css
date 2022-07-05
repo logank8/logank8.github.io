@@ -18,6 +18,7 @@ body {
 
 .topnav {
     background-color: rgba(224, 120, 99, 1);
+    overflow: hidden;
 }
 
 .topnav a {
@@ -27,6 +28,15 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.logo {
+    position: fixed;
+    padding: 0px;
+    overflow: hidden;
+    z-index: 1;
+    width: 198px;
 }
 
 
