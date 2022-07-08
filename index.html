@@ -7,58 +7,60 @@
     <link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
+
 <body>
-    <div class="container">
+
 <!--top navigation bar-->
-<div class="topnav">
-    <div class="logo">
-        <a href="index.html"><img src="logo.jpeg" width="100%"></a>
-    </div>
-    <a class="active" href="#about">About Me</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact Me</a>
+<div class="logo">
+    <a href="#top"><img src="images/logo.jpeg" width="25%"></a>
 </div>
+
+
+<div>   
+    <ul class="topnav">
+        <li><a>       </a></li>
+
+        <li><a href="#education">Education</a></li>
+
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#contact">Contact Me</a></li>
+        <!--padding stuff for navbar height... dont take out !!-->
+        <p id="pad">                                         _    </p>
+    </ul>
+    
+</div> 
+</body>
+
+
 
 <body class="intro">
-    <h1 class="good-font">Hello! This is my first website :)</h1>
+    <h1 class="good-font">________</h1>
 </body>
 </html>
-<div class="w3-panel w3-red">
-    <p> PANEL TEST!!!</p>
-</div>
+<body class="intro">
+    <h1 class="good-font">________</h1>
+</body>
+
 
 <!--INTRO-->
-<div class="intro">
-    <img class="pic1" src="images/pic1.png" />
-    <h1 id="test-id">My name is Logan!</h1>
-        <!--
-            IDs are for a unique instance of an element
-            classes are for repetitive cases
-        -->
-    <h3>I'm a third year majoring in computer science at UBC.</h3>
-        </div>
-
-<!--ABOUT-->
-
 <div class="about-grid">
     <div class="about-section">
-        <p>This is my first attempt at doing stuff with html.</p> 
+        <h1 id="header-id">Hello!</h1>
+        <p>I'm Logan! I'm currently a third year student majoring in Computer Science at University of British Columbia in Vancouver.  My current interests include
+            game design, data science, and machine learning.
+        </p> 
     </div>
-    <div class="about-section">
-        <p>Things I'm interested in:</p>
-        <ul class="about-list">
-            <li>Game development</li>
-            <li>Info Visualization</li>
-            <li>Possiblyyy web dev</li>
-        </ul>
+    
+    <div class="filler-section">
+        <img class="pic1" src="images/computer.jpeg" />
     </div> 
 </div>
 
 <!--PROJECTS-->
 
 <div>
-    <h3>My Projects</h3>
+    <h3 id="projects">My Projects</h3>
     <img src="https://via.placeholder.com/300" />
     <img src="https://via.placeholder.com/300" />
     <img src="https://via.placeholder.com/300" />
@@ -100,6 +102,5 @@
                 <input type="submit" valid="Send message"/>
                 </form>
         </div>
-    </div>
     </div>
 </body>
