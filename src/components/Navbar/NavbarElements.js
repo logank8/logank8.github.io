@@ -7,7 +7,6 @@ export const Nav = styled.nav`
     height: 85px;
     display: flex;
     justify-content: space-between;
-    font-family: 'Verdana', sans-serif;
     font-size: 11pt;
     padding: 0.2rem calc((100vw - 1000px) / 2);
     z-index: 12;

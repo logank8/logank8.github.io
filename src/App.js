@@ -7,6 +7,9 @@ import Resume from './pages/resume';
 import Projects from './pages/projects';
 import Contact from './pages/contact';
 
+// to do:
+// fix hamburger menu
+// add content to screens
 function App() {
   return (
     <Router>
