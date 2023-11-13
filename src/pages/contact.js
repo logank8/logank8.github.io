@@ -10,6 +10,7 @@ const Contact = () => {
             email: lokeener@student.ubc.ca
         </div>
     );
+    // TODO:
     // what to put here:
     // school email
     // linkedin

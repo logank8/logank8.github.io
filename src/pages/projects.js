@@ -1,6 +1,9 @@
 import React from 'react';
+import bardpic from './images/IMG_0331.JPG';
+import vanpic from './images/Van.png';
 
 const Projects = () => {
+    // TODO: create accordion display with summary for each project including tech used, major learning points, major setbacks, and pictures of product
     return (
         <div class="row" style={{
             fontFamily: 'serif'
@@ -41,12 +44,17 @@ const Projects = () => {
                     I spent my first year of university at <a href="https://simons-rock.edu/">Bard College at Simon's Rock</a>:
                     <br></br>
                     
-                    <img src="./images/IMG_0331.JPG" alt="Bard College at Simon's Rock" width="500" height="333">
+                    <img class='pic1' src={bardpic
+                } alt="Bard College at Simon's Rock">
                     </img>
                     
-
-                    Then I transferred to UBC Vancouver to major in Computer Science and minor in Mathematics!
                     <br></br>
+                    Then I transferred to <a href="https://ubc.ca/">UBC Vancouver</a> to major in Computer Science and minor in Mathematics!
+                    
+                    <br></br>
+                    <img style={{marginLeft:'50%'}} class='pic1' src={vanpic
+                } alt="Vancouver">
+                    </img>
                     <br></br>
                     I finished my 3rd year in May 2023; I'm intending on taking 12 months off for co-op positions and then graduating <b>May 2025</b>.
                 </body>

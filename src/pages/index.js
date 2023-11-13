@@ -57,6 +57,7 @@ const Home = () => {
                         height: '100%'}}
                      src="https://docs.google.com/document/d/e/2PACX-1vRzS6tM8B3VLegzgbeL00dZ3OwJKqtOAm-YdujWtG67xCaXUdnCoS-Q26hARgjpfeaaUMDt8cSghA68/pub?embedded=true" frameborder="60"></iframe>
                 </div>
+                {/* TODO: would love to make this document toggled by a button/arrow thingy... */}
             </body>
             
         </div>
