@@ -15,16 +15,16 @@ const Navbar = () => {
 
                 <NavMenu>
                     <NavHome to='/' activeStyle>
-                        LOGAN KEENER
+                        home
                     </NavHome>
-                    <NavLink to='/resume' activeStyle>
-                        Résumé
-                    </NavLink>
                     <NavLink to='/projects' activeStyle>
-                        Projects
+                         my experience&stuff
+                    </NavLink>
+                    <NavLink to='/blog' activeStyle>
+                        blog
                     </NavLink>
                     <NavLink to='/contact' activeStyle>
-                        Contact Me
+                        contact me
                     </NavLink>
                 </NavMenu>
             </Nav>

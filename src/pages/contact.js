@@ -7,11 +7,15 @@ const Contact = () => {
                 fontFamily: 'serif'
             }}
         >
-            <h1>
-                WHY IS NOTHING SHOWING UP
-            </h1>
+            email: lokeener@student.ubc.ca
         </div>
     );
+    // what to put here:
+    // school email
+    // linkedin
+    // github
+    // mastodon
+    // instagram
 };
 
 export default Contact;

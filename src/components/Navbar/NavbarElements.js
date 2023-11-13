@@ -3,11 +3,11 @@ import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.nav`
-    background: #563440;
+    background: #6D466B;
     height: 85px;
     display: flex;
     justify-content: space-between;
-    font-size: 11pt;
+    font-size: 14pt;
     padding: 0.2rem calc((100vw - 1000px) / 2);
     z-index: 12;
 `;
@@ -21,8 +21,9 @@ export const NavHome = styled(Link)`
     padding-right: 100px;
     height: 100%;
     cursor: pointer;
+    font-size: 16pt;
     &.active {
-        color: #DDCECD;
+        color: #C743A6;
     }
 `;
 
@@ -35,13 +36,13 @@ export const NavLink = styled(Link)`
     height: 100%;
     cursor: pointer;
     &.active {
-        color: #DDCECD;
+        color: #C743A6;
     }
 `;
 
 export const Bars = styled(FaBars)`
     display: none;
-    color: #ffffff;
+    color: #fffff;
     @media screen and (max-width: 768px) {
         display: block;
         position: absolute;
