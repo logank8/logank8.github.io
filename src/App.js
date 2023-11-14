@@ -3,9 +3,9 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
-import Resume from './pages/resume';
 import Projects from './pages/projects';
 import Contact from './pages/contact';
+import Blog from './pages/blog';
 
 // to do:
 // fix hamburger menu
