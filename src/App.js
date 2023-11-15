@@ -12,7 +12,7 @@ import Blog from './pages/blog';
 // add content to screens
 function App() {
   return (
-    <Router basename="/personal-website">
+    <Router>
       <Navbar />
       <Routes>
         <Route path='/' exact element={<Home />}></Route>
