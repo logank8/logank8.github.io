@@ -1,6 +1,6 @@
 # personal-website
 
-I finally made a website!
+I finally made a website! Not very "polished", just for fun :)
 
 The link is https://logank8.github.io/personal-website 
 
