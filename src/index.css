@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  background-color: #E3A1D3;
-  font-family:'Times New Roman', Times, serif;
+  background-color: #f0f0f0;
+  font-family: "Gill Sans", sans-serif;;
 }
 h1 {
   color: black;
-  margin-left: 50%;
+  margin-left: 40%;
 }
 code {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Gill Sans", sans-serif;;
 }
 
 a {

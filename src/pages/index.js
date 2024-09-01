@@ -5,40 +5,41 @@ const Home = () => {
     return (
         <div
             style={{
-                fontFamily: 'Times New Roman'
+                fontFamily: "Gill Sans"
             }}
         >
-            <h1>hiiiii !</h1>
+            <h1>Logan Keener</h1>
             <body class="info-text">
                 <div>
-                My name is <b>Logan Keener</b> (they/them), I'm a student in my fourth year at <b>UBC</b> doing Computer Science and Math among other coooool things :3
+                I am a student in my fourth year at <b>University of British Columbia</b> doing Computer Science and a minor in Mathematics!
                 </div>
                 <br>
                 </br>
                 <div>
 
-                <b>CURRENTLY:</b> I am taking a break from school for a co-op term! Also doing volunteer work for the <b><a href="https://www.artjusticeresearch.org/">A.R.T. Justice project</a></b>, helping create educational material for formerly incarcerated individuals.
+                <b>CURRENTLY:</b> I am finishing up my last semester! Also doing volunteer work for the <b><a href="https://www.artjusticeresearch.org/">A.R.T. Justice project</a></b>, helping create educational material for formerly incarcerated individuals.
+                <br></br>
 
-                When I am in school, I'm interested in:
+                Work I'm interested in:
                 <div style={{
                     marginLeft: '80px'
                 }}>
                     <li>
-                        Machine learning & data analytics
+                        Full-stack software development
                     </li>
                     <li>
-                        UX accessibility
+                        Software testing
                     </li>
                     <li>
-                        Queer inclusion in tech
+                        Database administration
                     </li>
                     <li>
-                        Ethical AI
+                        Game development
                     </li>
                 </div>
                 </div>
                 <div>
-                I am currently looking for another co-op position for January-May/August 2024! Check out my projects on this site or view my full resume here:
+                I am currently looking for a new grad position for January 2025! Check out my projects on this site or view my full resume here:
                     </div>
                 <div style={{
                     position: 'relative',
