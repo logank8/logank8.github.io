@@ -4,20 +4,41 @@ body {
   font-family: "Gill Sans", sans-serif;;
 }
 h1 {
-  color: black;
-  margin-left: 40%;
+  color: #000000;
+  font-size: calc(40px + 2vmin);
 }
 code {
   font-family: "Gill Sans", sans-serif;;
+}
+
+.home-image {
+  margin-right: 30%;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
   color:rgb(167, 20, 147)
 }
 
+.resumeBtn {
+  background-color:#3d3d66;
+  padding: 15px 40px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.resumeBtn:hover {
+  background-color: #5b5b85;
+  color: white;
+  border-color: #3d3d66;
+}
+
 .info-text {
-  margin-inline: 80px;
-  line-height: 1.6;
+  margin-left: 40px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .row {
@@ -25,7 +46,7 @@ a {
 }
 
 .column {
-  flex: 50%;
+  flex: 60%;
 }
 
 .pic1 {

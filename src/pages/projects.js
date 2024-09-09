@@ -27,7 +27,7 @@ const Projects = () => {
     items.push(proj304);
     return (
         <div class="row" style={{
-            fontFamily: 'serif'
+            fontFamily: "Gill Sans"
         }}
         >
             <div class="column">

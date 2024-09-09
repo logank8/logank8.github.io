@@ -18,10 +18,10 @@ const Navbar = () => {
                         home
                     </NavHome>
                     <NavLink to='/projects' activeStyle>
-                         my experience
+                         my work
                     </NavLink>
-                    <NavLink to='/blog' activeStyle>
-                        blog
+                    <NavLink to='/education' activeStyle>
+                        education
                     </NavLink>
                     <NavLink to='/contact' activeStyle>
                         contact me

@@ -1,69 +1,72 @@
 import React from 'react';
 import { FaAlignCenter } from 'react-icons/fa';
+import computerImg from './images/computer_clipart.png';
+import Card from './Card/index';
 
-const Home = () => {
+const Home = (message) => {
+    console.log(message);
     return (
         <div
             style={{
                 fontFamily: "Gill Sans"
             }}
         >
-            <h1>Logan Keener</h1>
-            <body class="info-text">
-                <div>
-                I am a student in my fourth year at <b>University of British Columbia</b> doing Computer Science and a minor in Mathematics!
-                </div>
-                <br>
-                </br>
-                <div>
+            <div className="row">
+                <div className="column">
+                    
+                    <div className="info-text">
+                        <h1>Logan Keener</h1>
+                        A student in at <b>University of British Columbia</b> studying Computer Science and a minor in Mathematics
+                    
+                        <br></br>
+                        <br></br>
 
-                <b>CURRENTLY:</b> I am finishing up my last semester! Also doing volunteer work for the <b><a href="https://www.artjusticeresearch.org/">A.R.T. Justice project</a></b>, helping create educational material for formerly incarcerated individuals.
-                <br></br>
+                        <>
+                            <b>CURRENTLY:</b> Looking for a new grad position for <b>January 2025</b>!
+                        </>
 
-                Work I'm interested in:
-                <div style={{
-                    marginLeft: '80px'
-                }}>
-                    <li>
-                        Full-stack software development
-                    </li>
-                    <li>
-                        Software testing
-                    </li>
-                    <li>
-                        Database administration
-                    </li>
-                    <li>
-                        Game development
-                    </li>
-                </div>
-                </div>
-                <div>
-                I am currently looking for a new grad position for January 2025! Check out my projects on this site or view my full resume here:
+                        <br></br>
+                        <br></br>
+
+                        <a href="https://acrobat.adobe.com/id/urn:aaid:sc:US:fc77482d-0ca3-41e3-b4cd-155985d5676e" target="_blank">
+                            <button className="resumeBtn">DOWNLOAD MY RESUME</button>
+                        </a>
                     </div>
-                <div style={{
-                    position: 'relative',
-                    overflow: 'hidden',
-                    width: '100%',
-                    paddingTop: '135%'
-                }}>
-                    <br></br>
-                    <iframe style={{
-                        width:'70%',
-                        position: 'absolute',
-                        top: '10px',
-                        left: 0,
-                        bottom: 0,
-                        right: 0,
-                        height: '100%'}}
-                     src="https://docs.google.com/document/d/e/2PACX-1vRzS6tM8B3VLegzgbeL00dZ3OwJKqtOAm-YdujWtG67xCaXUdnCoS-Q26hARgjpfeaaUMDt8cSghA68/pub?embedded=true" frameborder="60"></iframe>
                 </div>
-                {/* TODO: would love to make this document toggled by a button/arrow thingy... */}
-            </body>
+                
+                <div className="column">
+                    <img className="home-image" src={require('./images/computer_clipart.png')} />  
+                </div>
+            </div>
+    
+            <br></br>
+            <br></br>
+
+            <div className="info-text">
+                <>Work I'm interested in: </>
+                <br></br>
+                <br></br>
+                <ul>
+                    <li>Full-stack software development</li>
+                    <li>Data administration and analysis</li>
+                    <li>Game development</li>
+                </ul>
+
+
+                
+            </div>
+
+            <br></br>
+            <br></br>
+
+            <Card
+                className={["info-text"]}
+            />
+            
             
         </div>
         // to include on home page:
-        // what I'm interested in
+        // work im interested in - interactive cards
     );
 };
 
