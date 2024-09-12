@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaAlignCenter } from 'react-icons/fa';
-import computerImg from './images/computer_clipart.png';
 import Card from './Card/index';
 
 
@@ -28,7 +27,7 @@ const Home = (message) => {
                     
                     <div className="info-text">
                         <h1>Logan Keener</h1>
-                        A student in at <b>University of British Columbia</b> studying Computer Science and a minor in Mathematics
+                        Student at <b>University of British Columbia</b> studying Computer Science and a minor in Mathematics
                     
                         <br></br>
                         <br></br>
@@ -89,8 +88,6 @@ const Home = (message) => {
             
             
         </div>
-        // to include on home page:
-        // work im interested in - interactive cards
     );
 };
 

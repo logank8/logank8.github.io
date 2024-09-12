@@ -54,7 +54,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/education', (req, res) => {
-    connection.query('SELECT * FROM Education.Course;', function(err, tables) {
+    connection.query('SELECT CONCAT(`dept`, `code`), description, grade, school, term, year FROM Education.Course;', function(err, tables) {
         res.send(tables);
     });
 });
