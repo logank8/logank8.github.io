@@ -3,8 +3,20 @@ import { FaAlignCenter } from 'react-icons/fa';
 import computerImg from './images/computer_clipart.png';
 import Card from './Card/index';
 
+
+function parseRelevantCourses(message) {
+    // since the entire thing has apparently been converted to string:
+    // we iterate it over similarly to an array of chars, using { and } as signifiers of the beginning and end of an object. 
+    // from there we might be able to use JSON.parse
+
+
+
+    return message;
+};
+
+
 const Home = (message) => {
-    console.log(message);
+    message = parseRelevantCourses(message);
     return (
         <div
             style={{
@@ -43,14 +55,7 @@ const Home = (message) => {
             <br></br>
 
             <div className="info-text">
-                <>Work I'm interested in: </>
-                <br></br>
-                <br></br>
-                <ul>
-                    <li>Full-stack software development</li>
-                    <li>Data administration and analysis</li>
-                    <li>Game development</li>
-                </ul>
+                <>WORK I'M INTERESTED IN: </>
 
 
                 
@@ -59,9 +64,28 @@ const Home = (message) => {
             <br></br>
             <br></br>
 
-            <Card
-                className={["info-text"]}
-            />
+
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+                marginRight: "5%"
+            }}>
+                <Card
+                    title="Full-Stack Software Development"
+                    info="This is sample info that will later be replaced with something from the database."
+                />
+                <Card 
+                    title="Data Administration and Analysis"
+                    info="This is sample info that will later be replaced with something from the database."
+                />
+               <Card
+                    title="Game Development"
+                    info="This is sample info that will later be replaced with something from the database."
+                />
+                
+                
+            </div>
+            
             
             
         </div>

@@ -28,6 +28,7 @@ export const NavHome = styled(Link)`
         color: #ffffff;
     };
     &:hover {
+        transition: 0.2s;
         color: #ffffff;
     };
 `;
@@ -45,6 +46,7 @@ export const NavLink = styled(Link)`
         color: #ffffff;
     };
     &:hover {
+        transition: 0.2s;
         color: #ffffff;
     };
 `;
