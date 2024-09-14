@@ -1,21 +1,90 @@
-import React from 'react';
+import { getByTitle } from '@testing-library/react';
+import React, { useState, useEffect } from 'react';
 import { FaAlignCenter } from 'react-icons/fa';
 import Card from './Card/index';
 
+const relevantFields = ['Full Stack Software Development', 'Data Administration and Analysis', 'Game Development'];
+
+
+// should probably add more guards to this function or maybe error catching on JSON parse
 
 function parseRelevantCourses(message) {
-    // since the entire thing has apparently been converted to string:
-    // we iterate it over similarly to an array of chars, using { and } as signifiers of the beginning and end of an object. 
-    // from there we might be able to use JSON.parse
+    // just to confirm that it is a string
+    const text = String(message);
+    // return an array of JSON objects
+    var courseObjects = [];
+
+    var inObj = false;
+    let objtext = "";
+    for (let i = 1; i < text.length; i++) {
+        if ((text[i] === '{') && (!inObj)) {
+            inObj = true;
+            objtext = objtext.concat(text[i]);
+        } else if (((text[i] === ',') || (text[i] === ']')) && (inObj) && (text[i-1] === '}')) {
+            const obj = JSON.parse(objtext);
+            obj['course'] = obj['JSON_ARRAYAGG(`description`)'];
+            delete obj['JSON_ARRAYAGG(`description`)'];
+            courseObjects.push(obj);
+            inObj = false;
+            objtext = "";
+        } else if (inObj) {
+            objtext = objtext.concat(text[i]);
+        }
+    }
 
 
-
-    return message;
+    return courseObjects;
 };
 
+function makeFieldCard(title, info) {    
 
-const Home = (message) => {
-    message = parseRelevantCourses(message);
+    return <Card title={title} info={info.join()} />
+};
+
+const Home = () => {
+    const [message, setMessage] = useState('');
+    useEffect(() => { // eventually will have to change this to permanent server host endpoint
+    fetch('http://localhost:3306/')
+      .then((res) => res.text())
+      .then((data) => setMessage(data))
+      .catch((err) => console.log(err));
+    }, []);
+
+    const courses = parseRelevantCourses(message);
+
+    // message should be an array of objects
+    const makeCards = () => {
+        if (courses.length === 0) {
+            return <></>;
+        }
+        const fieldsObj = {};
+
+        const result = [];
+
+        for (let i = 0; i < relevantFields.length; i++) {
+            
+            const courseMatch = courses.find((course) => {
+                if (course === undefined) {
+                    return false;
+                } else {
+                    const field = course.relevantField;
+                    return field.toUpperCase() === relevantFields[i].toUpperCase();
+                }
+                
+            });
+
+            fieldsObj[relevantFields[i].toUpperCase()] = courseMatch.course;
+            
+
+            result.push(makeFieldCard(relevantFields[i], fieldsObj[relevantFields[i].toUpperCase()]));
+        }
+
+        return result;
+    };
+
+
+    // for every relevant field: filter courses
+
     return (
         <div
             style={{
@@ -50,14 +119,9 @@ const Home = (message) => {
                 </div>
             </div>
     
-            <br></br>
-            <br></br>
 
             <div className="info-text">
                 <>WORK I'M INTERESTED IN: </>
-
-
-                
             </div>
 
             <br></br>
@@ -69,18 +133,7 @@ const Home = (message) => {
                 flexDirection: "row",
                 marginRight: "5%"
             }}>
-                <Card
-                    title="Full-Stack Software Development"
-                    info="This is sample info that will later be replaced with something from the database."
-                />
-                <Card 
-                    title="Data Administration and Analysis"
-                    info="This is sample info that will later be replaced with something from the database."
-                />
-               <Card
-                    title="Game Development"
-                    info="This is sample info that will later be replaced with something from the database."
-                />
+                {courses.length === 0 ? null : makeCards()}
                 
                 
             </div>

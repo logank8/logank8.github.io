@@ -3,20 +3,46 @@ import Circle from './Circle/index';
 import ReactDOM from 'react-dom';
 import { objectTypeCallProperty } from '@babel/types';
 
+function HorizCourseContainer(circles) {
+    return <div style={{
+        gridColumn: "1",
+        display: "flex",
+        flexDirection: "row",
+        width: "100%",
+        justifyContent: 'center',
+        padding: "0"
+    }}>
+        {circles}
+    </div>;
+    
+}
+
 
 function returnCourses(courses) {
-    let container = <div></div>;
     var circles = [];
 
     courses.forEach((course) => {
         circles.push(<Circle title={course.title} code={course.code} description={course.description} />);
     });
 
+    var containers = [];
+
+    for (let i = 0; i < circles.length; i++) {
+        if (i % 6 === 0) {
+            // circles[i, i + 1, i + 2, i + 3, i + 4]
+            containers.push(HorizCourseContainer(circles.slice(i, i+6)))
+        } else if (circles.length - i < 6) {
+            containers.push(HorizCourseContainer(circles.slice(i, circles.length)));
+            break;
+        }
+    }
+
+
     return <div style={{
-        marginLeft: "8%",
         display: "grid",
-        gridTemplateColumns: "15% 15% 15% 15% 15% 15%"
-    }}>{circles}</div>;
+        gap: "0",
+        padding: "0"
+        }}> {containers} </div>;
 
 };
 
@@ -38,7 +64,7 @@ function parseCourses(data) {
         if ((text[i] === '{') && (!inObj)) {
             inObj = true;
             objtext = objtext.concat(text[i]);
-        } else if ((text[i] === ',') && (inObj) && (text[i-1] === '}')) {
+        } else if (((text[i] === ',') || (text[i] === ']')) && (inObj) && (text[i-1] === '}')) {
             const obj = JSON.parse(objtext);
             obj['code'] = obj['CONCAT(`dept`, `code`)'];
             delete obj['CONCAT(`dept`, `code`)'];
@@ -55,15 +81,18 @@ function parseCourses(data) {
 
 
 const Education = () => {
-    const [message, setMessage] = useState('');
+    const [query, setQuery] = useState({});
+    // add data points to messages
+    
+
     useEffect(() => { // eventually will have to change this to permanent server host endpoint
-    fetch('http://localhost:3306/education')
+    fetch('http://localhost:3306/education/cs-1-f')
       .then((res) => res.text())
-      .then((data) => setMessage(data))
+      .then((data) => setQuery(data))
       .catch((err) => console.log(err));
   }, []);
 
-    const courses = parseCourses(message);
+    const courses = parseCourses(query.result);
 
     return (
         <div 

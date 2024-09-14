@@ -17,6 +17,8 @@ const Card = (props) => {
     let cardText;
     let button;
 
+    
+
     if (front) {
         cardText = (<div className="cardTitle" style={{
             textAlign: "center",
@@ -33,7 +35,7 @@ const Card = (props) => {
             marginInline: "10%",
             height: "120px",
             marginTop: "10%"
-        }}> {props.info} </div>;
+        }}> relevant courses: {props.info} </div>;
         button = <button className="card-button" onClick={backToFront}><b>CLOSE</b></button>;
     }
 

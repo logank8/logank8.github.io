@@ -40,20 +40,38 @@ app.use(cors());
 /*
 Sending all courses relevant to my current fields of interest
 
-SELECT relevantField, CONCAT(`dept`, `code`) 
-FROM Education.Course
-WHERE relevantField != null;
+SELECT relevantField, JSON_ARRAYAGG(`description`)
+FROM Education.Course as c
+WHERE c.relevantField IN (
+	SELECT c1.relevantField
+	FROM Education.Course as c1
+	WHERE c1.description = c.description
+) GROUP BY c.relevantField;
 */
 
 app.get('/', (req, res) => {
    
-    connection.query('SELECT relevantField, CONCAT(`dept`, `code`) FROM Education.Course WHERE relevantField IS NOT NULL ORDER BY relevantField;', function(err, tables) {
+    connection.query('SELECT relevantField, JSON_ARRAYAGG(`description`) FROM Education.Course as c WHERE c.relevantField IN (SELECT c1.relevantField FROM Education.Course as c1 WHERE c1.description = c.description) GROUP BY c.relevantField;', function(err, tables) {
         res.send(tables);
     });
     
 });
 
-app.get('/education', (req, res) => {
+/* 
+SELECT CONCAT(`dept`, `code`), description, grade, school, term, year 
+FROM Education.Course;
+
+possible filterings:
+ - only computer science
+ - only math
+ - only computer science and math
+ - order by oldest/latest
+ - relevant field filtering
+*/
+
+app.get('/education/:subject-:yr-:field', (req, res) => {
+    console.log(req.params);
+
     connection.query('SELECT CONCAT(`dept`, `code`), description, grade, school, term, year FROM Education.Course;', function(err, tables) {
         res.send(tables);
     });
