@@ -1,5 +1,5 @@
 {
-  "homepage": "https://logank8.github.io/",
+  "homepage": "https://logank8.github.io/personal-website",
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
@@ -10,7 +10,6 @@
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
-    "gh-pages": "^6.0.0",
     "http": "^0.0.1-security",
     "mysql2": "^3.11.0",
     "net": "^1.0.2",
@@ -68,5 +67,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/logank8/personal-website/issues"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

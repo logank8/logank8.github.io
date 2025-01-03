@@ -102,7 +102,7 @@ const Home = () => {
                         <br></br>
 
                         <>
-                            <b>CURRENTLY:</b> Looking for a new grad position for <b>January 2025</b>!
+                            <b>CURRENTLY:</b> Looking for a new grad position for <b>May 2025</b>!
                         </>
 
                         <br></br>

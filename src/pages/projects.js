@@ -30,7 +30,7 @@ const Projects = () => {
             fontFamily: "Gill Sans"
         }}
         >
-            <div class="column">
+            <div class="column" style={{marginLeft: "15px"}}>
                 <h2>
                     my past work
                 </h2>
@@ -64,10 +64,8 @@ const Projects = () => {
                         <AccordionItemPanel>
                         <body>
                         This is a script I wrote with Python, Discord.py, and Selenium to check a few different UBC courses. 
-                        I've been wanting to work with Selenium for a while now, and this was a great great chance. 
+                        I've been wanting to work with Selenium for a while now, and this was a great chance. 
                         And of course, I always love Python.
-                        <br></br>
-                        It would be great to do some more automation stuff in the future!!
                         <br></br>
                         Github repository link <a href="https://github.com/logank8/waitlist-bot-script">here</a>!
                         </body>
@@ -84,7 +82,7 @@ const Projects = () => {
                         This is by far my favorite project I've done, and I keep wanting to come back to it and do more. I made a machine learning model using a Random Forest algorithm with the scikit Python library and some synthetic data from Kaggle.
                         I made a little web app in Flask to demonstrate it, and used the Tekore.py library to gather some more data for an interactive search-and-test component. 
                         One thing that I would love to do now is write a Python automation script to gather some mass of data from the Tekore library and then create test and train datasets off of that, because the Kaggle data wasn't as accurate as I would've liked (and the Tekore library definitely is).
-                        As it stands, though, I'm still proud of what I've done with it because I always love Random Forest models.
+                        As it stands, though, I'm still proud of what I've done with it because I love Random Forest models.
                         <br></br>
                         Github repository link <a href="https://github.com/logank8/flask-model">here</a>!
                         </body>
@@ -143,7 +141,7 @@ const Projects = () => {
 
         I originally had attempted to do the html navigation with Python's Selenium library, but later found that the node.js Puppeteer library is much better for these purposes!
                             <br></br>
-        ** do NOT run this, it takes up a lot of memory; I am currently working on changing it to write to a csv which will likely take less memory space !! The script can be used/copied for personal use though. I am not endorsing using this for any sort of automated enrollment as I'm pretty sure that is extremely not allowed!!!! However...if someone wanted to use my code for that, that's none of my business.
+        ** This code is no longer runnable since UBC has moved to Workday! But I do still use it as a framework for web scraping purposes.
                             <br></br>
                             Github repository link <a href="https://github.com/logank8/ubc-webscrape">here</a>!
                             </body>
@@ -168,11 +166,10 @@ const Projects = () => {
                     Then I transferred to <a href="https://ubc.ca/">UBC Vancouver</a> to major in Computer Science and minor in Mathematics!
                     
                     <br></br>
-                    <img style={{marginLeft:'50%'}} class='pic1' src={vanpic
-                } alt="Vancouver">
+                    <img class='pic1' src={vanpic} alt="Vancouver">
                     </img>
                     <br></br>
-                    I finished my 3rd year in May 2023; I'm intending on taking 12 months off for co-op positions and then graduating <b>May 2025</b>.
+                    I'm planning on graduating in <b>April 2025</b>.
                 </body>
             </div>
         </div>
