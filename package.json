@@ -57,7 +57,7 @@
     ]
   },
   "description": "I finally made a website! Not very \"polished\", just for fun :)",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/logank8/personal-website.git"
