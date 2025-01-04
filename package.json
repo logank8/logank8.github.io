@@ -1,5 +1,5 @@
 {
-  "homepage": "https://logank8.github.io/personal-website",
+  "homepage": "https://logank8.github.io/personal-website/",
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
@@ -57,7 +57,7 @@
     ]
   },
   "description": "I finally made a website! Not very \"polished\", just for fun :)",
-  "main": "src/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/logank8/personal-website.git"
